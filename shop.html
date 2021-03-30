@@ -9,9 +9,9 @@
     <script src="js/main.js"></script>
     <title>The (un)official website of Infected Mushroom!</title>
   </head>
-  <div class="fadeInOverlay1"></div>
-  <div class="fadeInOverlay2"></div>
   <body>
+    <div class="fadeInOverlay1"></div>
+    <div class="fadeInOverlay2"></div>
     <div class="headerBlock">
       <div class="overlay"></div>
       <figure>
@@ -21,52 +21,52 @@
     <header>
       <nav>
         <ul class="navBarOptions">
-          <li><a class="activePage" href=".">Home</a></li>
-          <li><a href="/tours.html">Tours</a></li>
-          <li><a href="/shop.html">Shop</a></li>
-          <li><a href="/about.html">About</a></li>
           <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a class="activePage" href=".">Shop</a></li>
+          <li><a href="/tours.html">Tours</a></li>
+          <li><a href="/index.html">Home</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <section class="shopGrid">
 
-        <div class="shopItem1">
+        <article data-name="Converting Vegetarians II - LP" onclick="koopProduct(this.getAttribute('data-name'))" class="shopItem1 shopItem">
           <h3 class="shopItemTitle"> Converting Vegetarians II - LP </h3>
           <figure class="shopItemFigure"><img src="/img/Merch_ConvertingVegetarians2Vinyl.jpg" alt="LP Cover of Converting Vegetarians II."></figure>
           <p class="shopItemDescription"> A vinyl record of the album 'Converting Vegetarians II'<p>
-        </div>
+        </article>
 
-        <div class="shopItem2">
+        <article data-name="Army Of Mushrooms - LP" onclick="koopProduct(this.getAttribute('data-name'))" class="shopItem2 shopItem">
           <h3 class="shopItemTitle"> Army Of Mushrooms - LP </h3>
           <figure class="shopItemFigure"><img src="/img/Merch_ArmyOfMushroomsVinyl.jpg" alt="LP Cover of Army Of Mushrooms."></figure>
           <p class="shopItemDescription"> A vinyl record of the album 'Army Of Mushrooms'<p>
-        </div>
+        </article>
 
-        <div class="shopItem3">
+        <article data-name="Infected Mushroom T-Shirt - Black" onclick="koopProduct(this.getAttribute('data-name'))" class="shopItem3 shopItem">
           <h3 class="shopItemTitle"> Infected Mushroom T-Shirt - Black </h3>
           <figure class="shopItemFigure"><img src="/img/Merch_BlackTshirt.png" alt="Infected Mushroom T-Shirt"></figure>
           <p class="shopItemDescription"><strong>Limited edition!</strong> - Black Infected Mushroom T-Shirt<p>
-        </div>
+        </article>
 
-        <div class="shopItem4">
-          <h3 class="shopItemTitle"> Music record 4 </h3>
-          <figure class="shopItemFigure"><img src="/img/Merch_FriendsOnMushrooms.jpg" alt="Picture of vinyl record of Infected Mushroom."></figure>
+        <article data-name="Return To The Sauce - LP" onclick="koopProduct(this.getAttribute('data-name'))" class="shopItem4 shopItem">
+          <h3 class="shopItemTitle"> Return To The Sauce - LP </h3>
+          <figure class="shopItemFigure"><img src="/img/Merch_ReturnToTheSauce.jpg" alt="Picture of vinyl record of Infected Mushroom."></figure>
           <p class="shopItemDescription"> A vinyl record of the album 'Return to the Sauce'.<p>
-        </div>
+        </article>
 
-        <div class="shopItem5">
-          <h3 class="shopItemTitle"> Music record 5 </h3>
-          <figure class="shopItemFigure"><img src="" alt="Picture of vinyl record of Infected Mushroom."></figure>
+        <article data-name="Legend of the Black Shawarma - LP" onclick="koopProduct(this.getAttribute('data-name'))" class="shopItem5 shopItem">
+          <h3 class="shopItemTitle"> Legend of the Black Shawarma - LP </h3>
+          <figure class="shopItemFigure"><img src="/img/Merch_LegendoftheBlackShawarma.jpg" alt="Picture of vinyl record of Infected Mushroom."></figure>
           <p class="shopItemDescription"> A vinyl record of the album 'Return to the Sauce'.<p>
-        </div>
+        </article>
 
-        <div class="shopItem6">
+        <article data-name="Infected Mushroom T-Shirt - White" onclick="koopProduct(this.getAttribute('data-name'))" class="shopItem6 shopItem">
           <h3 class="shopItemTitle"> Infected Mushroom T-Shirt - White </h3>
           <figure class="shopItemFigure"><img src="img/Merch_WhiteTshirt.png" alt="Infected Mushroom T-Shirt."></figure>
           <p class="shopItemDescription"><strong>Limited edition!</strong> - White Infected Mushroom T-Shirt<p>
-        </div>
+        </article>
       </section>
     </main>
     <footer class="footerMain">
