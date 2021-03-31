@@ -30,21 +30,22 @@
       </nav>
     </header>
     <main>
-      <div class="infoGrid">
-        <h2 class="Home_InfoTitle"><b>What is Infected Mushroom?</b></h2>
-        <p class="Home_InfoText">Infected Mushroom is an Israeli musical duo formed in Haifa in 1996 by producers Erez Eisen and Amit Duvdevani.
-            They produce and perform psytrance, electronica, dream trance and psychedelic music.
-            They are one of the best-selling groups in Israeli music history in terms of both domestic and international sales.
-            <br><br>
-            They employ a variety of musical sources, including acoustic guitars and complex synthesized basses.
-            Their compositions often contain changes of drum beat and tempo.
-            Infected Mushroom's live shows feature vocals and analogue instruments in performances that are set against a multimedia backdrop.</p>
-        <div class="Home_Image">
-          <figure>
-            <img class="IMDuoPicture" src="img/IMDuo.jpg" alt="Infected Mushroom Duo">
-          </figure>
-        </div>
-      </div>
+      <article class="contact-form__container">
+        <form class="contact-form__form" action="index.html" method="post">
+          <label id="naamLabel" for="name">Naam: </label>
+          <input id="naamInput" type="text" name="name">
+          <label id="emailLabel" for="email">E-mail: </label>
+          <input id="emailInput" type="email" name="email">
+          <label id="questionType" for="questionType">Wat voor soort vraag wil je stellen: </label>
+          <select id="questionType" class="dropdown" name="questionType">
+            <option value="opmerking">Opmerking </option>
+            <option value="vraag">Vraag </option>
+            <option value="liefdesbrief">Liefdesbrief </option>
+          </select>
+          <textarea id="opmerking" name="opmerking" rows="8" cols="80"></textarea>
+          <button class="" type="button" name="button"></button>
+        </form>
+      </article>
     </main>
     <footer class="footerMain">
       <p> Test test </p>

@@ -135,7 +135,6 @@ p {
 /*------------Tour grid----------------- */
 .tourGrid{
   display: grid;
-  grid-template-columns: repeat()
 }
 
 /*------------Shopping-grid--------------*/
@@ -203,6 +202,80 @@ p {
 .shopItem6 {
   grid-area: 4 / 3 / 7 / 4;
 }
+
+
+/*------------Contact Grid--------------*/
+.contact-form__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    'naamLabel opmerking .'
+    'naamInput opmerking .'
+    'emailLabel opmerking .'
+    'emailInput opmerking .'
+    'questionType opmerking .'
+    'dropdown opmerking .'
+    'button opmerking .';
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+}
+
+.naamLabel{
+  grid-area: naamLabel;
+}
+
+.naamInput{
+  grid-area: naamInput;
+}
+
+.emailLabel{
+  grid-area: emailLabel;
+}
+
+.emailInput{
+  grid-area: emailInput;
+}
+
+.questionType{
+  grid-area: questionType;
+}
+
+.dropdown{
+  grid-area: dropdown;
+}
+
+.button{
+  grid-area: button;
+}
+
+.opmerking{
+  grid-area: opmerking;
+}
+
+/*-------------About Grid---------------*/
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  gap: 1rem 1rem;
+  grid-template-areas:
+    "artiest1 aboutFoto1 artiest2"
+    "aboutFoto2 discography aboutFoto3";
+}
+
+.artiest1 { grid-area: artiest1; }
+
+.aboutFoto1 { grid-area: aboutFoto1; }
+
+.artiest2 { grid-area: artiest2; }
+
+.discography { grid-area: discography; }
+
+.aboutFoto2 { grid-area: aboutFoto2; }
+
+.aboutFoto3 { grid-area: aboutFoto3; }
+
 /*------------Navigation bar-------------*/
 .navBarOptions {
   list-style-type: none;
