@@ -130,7 +130,7 @@ p {
 .Home_InfoTitle {
   text-align: center;
   grid-area: infoTitle;
-  margin-top: 5vw;
+  margin-top: 1rem;
 }
 
 .Home_InfoText {
@@ -149,11 +149,6 @@ p {
 
 .IMDuoPicture{
   width: 35vw;
-}
-
-/*------------Tour grid----------------- */
-.tourGrid{
-  display: grid;
 }
 
 /*------------Shopping-grid--------------*/
@@ -276,10 +271,11 @@ p {
   grid-template-columns: auto auto auto;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
-    "naam . ."
+    "naam invulvak ."
     "email invulvak ."
     "vraagType invulvak knop";
-    padding: 1rem;
+  padding: 1rem;
+  gap: 3vw 3vw;
 }
 
 .contact-form__section__name{
@@ -296,6 +292,12 @@ p {
 
 .contact-form__section__textarea{
   grid-area: invulvak;
+  margin: 1rem;
+}
+
+.contact-form__section__textarea > textarea{
+  width: 30vw;
+  height: 100%;
 }
 
 .contact-form__section__button{
@@ -315,6 +317,36 @@ p {
 .contact-form__form > section > select{
   width: 10vw;
   font-size: 120%;
+}
+
+@media only screen and (max-width: 1000px){
+  .contact-form__form {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "naam invulvak "
+      "email invulvak "
+      "vraagType invulvak"
+      ". knop";
+    gap: 2vw 2vw;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .contact-form__form > section > label{
+    font-size: 100%;
+  }
+
+  .contact-form__form > section > input{
+    width: 30vw;
+    height: 1rem;
+  }
+
+  .contact-form__form > section > select{
+    width: 15vw;
+    font-size: 80%;
+  }
 }
 /*-------------About Grid---------------*/
 .grid-container__about {
@@ -354,6 +386,7 @@ p {
 
 .aboutTekst{
   padding-left: 1rem;
+  font-size: 110%;
 }
 
 .discography > ul{
