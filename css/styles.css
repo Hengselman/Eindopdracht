@@ -94,6 +94,25 @@ p {
   animation-iteration-count: infinite;
 }
 
+.IMbutton {
+  float: right;
+  background-color: #eeeeee;
+  color: #08193B;
+  font-weight: bold;
+  font-size: 120%;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+
+.IMbutton:hover{
+  background-color: #08193B;
+  color: #eeeeee;
+  border: 1px solid white;
+}
+
 /*----------------Main--------------------*/
 .infoGrid {
   display: grid;
@@ -142,6 +161,13 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+    'shopItem1 shopItem2 shopItem3'
+    'shopItem1 shopItem2 shopItem3'
+    'shopItem1 shopItem2 shopItem3'
+    'shopItem4 shopItem5 shopItem6'
+    'shopItem4 shopItem5 shopItem6'
+    'shopItem4 shopItem5 shopItem6';
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
@@ -173,95 +199,133 @@ p {
 }
 
 .shopItem1 {
-  grid-area: 1 / 1 / 4 / 2;
+  grid-area: shopItem1;
   border-right: 1px solid white;
   border-bottom: 1px solid white;
 }
 
 .shopItem2 {
-  grid-area: 1 / 2 / 4 / 3;
+  grid-area: shopItem2;
 }
 
 .shopItem3 {
-  grid-area: 1 / 3 / 4 / 4;
+  grid-area: shopItem3;
   border-left: 1px solid white;
   border-bottom: 1px solid white;
 }
 
 .shopItem4 {
-  grid-area: 4 / 1 / 7 / 2;
+  grid-area: shopItem4;
 }
 
 .shopItem5 {
-  grid-area: 4 / 2 / 7 / 3;
+  grid-area: shopItem5;
   border-top: 1px solid white;
   border-left: 1px solid white;
   border-right: 1px solid white;
 }
 
 .shopItem6 {
-  grid-area: 4 / 3 / 7 / 4;
+  grid-area: shopItem6;
+}
+
+@media only screen and (max-width: 1000px) {
+  .shopItemFigure > img {
+      height: auto;
+      width: 30vw;
+  }
+
+  .shopGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-areas:
+      'shopItem1 shopItem2'
+      'shopItem1 shopItem2'
+      'shopItem1 shopItem2'
+      'shopItem3 shopItem4'
+      'shopItem3 shopItem4'
+      'shopItem3 shopItem4'
+      'shopItem5 shopItem6'
+      'shopItem5 shopItem6'
+      'shopItem5 shopItem6';
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .shopItem3{
+    border-left: 0;
+    border-bottom: 0;
+  }
+
+  .shopItem4 {
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+  }
+
+  .shopItem5{
+    border-left: 0;
+  }
 }
 
 
 /*------------Contact Grid--------------*/
 .contact-form__form {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas:
-    'naamLabel opmerking .'
-    'naamInput opmerking .'
-    'emailLabel opmerking .'
-    'emailInput opmerking .'
-    'questionType opmerking .'
-    'dropdown opmerking .'
-    'button opmerking .';
-  grid-column-gap: 0;
-  grid-row-gap: 0;
-}
-
-.naamLabel{
-  grid-area: naamLabel;
-}
-
-.naamInput{
-  grid-area: naamInput;
-}
-
-.emailLabel{
-  grid-area: emailLabel;
-}
-
-.emailInput{
-  grid-area: emailInput;
-}
-
-.questionType{
-  grid-area: questionType;
-}
-
-.dropdown{
-  grid-area: dropdown;
-}
-
-.button{
-  grid-area: button;
-}
-
-.opmerking{
-  grid-area: opmerking;
-}
-
-/*-------------About Grid---------------*/
-.grid-container {
-  display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto;
-  gap: 1rem 1rem;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "naam . ."
+    "email invulvak ."
+    "vraagType invulvak knop";
+    padding: 1rem;
+}
+
+.contact-form__section__name{
+  grid-area: naam;
+}
+
+.contact-form__section__email{
+  grid-area: email;
+}
+
+.contact-form__section__questionType{
+  grid-area: vraagType;
+}
+
+.contact-form__section__textarea{
+  grid-area: invulvak;
+}
+
+.contact-form__section__button{
+  grid-area: knop;
+}
+
+.contact-form__form > section > label{
+  color: white;
+  font-size: 150%;
+}
+
+.contact-form__form > section > input{
+  width: 20vw;
+  height: 1.5rem;
+}
+
+.contact-form__form > section > select{
+  width: 10vw;
+  font-size: 120%;
+}
+/*-------------About Grid---------------*/
+.grid-container__about {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 3vw 3vw;
   grid-template-areas:
     "artiest1 aboutFoto1 artiest2"
     "aboutFoto2 discography aboutFoto3";
+  padding-top: 1rem;
 }
 
 .artiest1 { grid-area: artiest1; }
@@ -275,6 +339,97 @@ p {
 .aboutFoto2 { grid-area: aboutFoto2; }
 
 .aboutFoto3 { grid-area: aboutFoto3; }
+
+.aboutFoto__img{
+  height: auto;
+  width: 30vw;
+  object-fit: cover;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+
+.grid-container__about > section > h2{
+  margin-bottom: 1rem;
+}
+
+.aboutTekst{
+  padding-left: 1rem;
+}
+
+.discography > ul{
+  display: block;
+  padding-left: 2rem;
+  color: white;
+  font-family: monospace;
+}
+
+@media only screen and (max-width: 1000px){
+  .grid-container__about {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3vw 3vw;
+    grid-template-areas:
+      "artiest1 aboutFoto1"
+      "aboutFoto2 artiest2"
+      "discography aboutFoto3";
+    padding-top: 1rem;
+  }
+
+  .aboutSectionFoto{
+    text-align: center;
+  }
+
+  .aboutFoto__img{
+    width: 40vw;
+  }
+
+
+}
+
+@media only screen and (max-width: 600px){
+  .grid-container__about {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 3vw 3vw;
+    grid-template-areas:
+      "artiest1 aboutFoto1"
+      "aboutFoto2 artiest2"
+      "discography aboutFoto3";
+    padding-top: 1rem;
+  }
+}
+
+/*-------------Tour Grid-----------------*/
+.tourGrid{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 3vw 3vw;
+  grid-template-areas:
+    "tour1"
+    "tour2"
+    "tour3";
+}
+
+.tour1{
+  grid-area: tour1;
+}
+
+.tour2{
+  grid-area: tour2;
+}
+
+.tour3{
+  grid-area: tour3;
+}
+
+.tourSection{
+  padding: 2rem;
+  margin: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 5px #000000;
+}
 
 /*------------Navigation bar-------------*/
 .navBarOptions {
@@ -321,9 +476,23 @@ p {
 .footerMain {
   width: 100%;
   height: 60px;
-  background-color: red;
+  background-color: #2E294E;
   color: white;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: 0px -2px 20px 8px #000000;
+}
+
+.footerMain > p{
+  font-size: 80%;
+  padding-right: 1rem;
+}
+
+/*-------------Utility CLasses--------*/
+.a-justifyContent{
+  display: flex;
+  justify-content: center;
 }
 
 /*---------------Scrollbar------------*/
