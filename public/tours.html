@@ -6,18 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css"/>
-    <script src="js/main.js"></script>
     <title>The (un)official website of Infected Mushroom!</title>
   </head>
   <body>
     <div class="fadeInOverlay1"></div>
     <div class="fadeInOverlay2"></div>
-    <div class="headerBlock">
+    <section class="headerBlock">
       <div class="overlay"></div>
       <figure>
         <img class="IMTitleCard" src="img/IMTitle.png" alt="Infected Mushroom">
       </figure>
-    </div>
+    </section>
     <header>
       <nav>
         <ul class="navBarOptions">
@@ -34,22 +33,86 @@
         <section class="tourSection tour1">
           <h1>Moskou, Rusland</h1>
           <h2>15 Mei</h2>
-          <button type="button" name="button" class="IMbutton">Buy ticket!</button>
+          <button type="button" name="button" class="modal-button IMbutton">Buy ticket!</button>
+
+          <section class="modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="closeButton">&times;</span>
+                <h2>Moskou, Russia tickets</h2>
+              </div>
+              <div class="modal-body">
+                <h3 class="modal-date">15 May</h3>
+                <p class="modal-text">This dance event has been organised by the ACM in cooperation with Infected Mushroom to bring you the music experience of a lifetime, you cannot miss this! A festival hosting 4 seperate stages, with big names appearing such as Astrix, Infected Mushroom and Neelix!</p>
+                <select class="modal-amount" name="ticketAmount">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+                <button class="ticket-button" type="button" name="button" onclick="ticketGekocht()">Buy!</button>
+              </div>
+            </div>
+          </section>
+
         </section>
         <section class="tourSection tour2">
           <h1>Neustadt-Glewe, Duitsland</h1>
           <h2>7 juli</h2>
-          <button type="button" name="button" class="IMbutton">Buy ticket!</button>
+          <button type="button" name="button" class="modal-button IMbutton">Buy ticket!</button>
+
+          <section class="modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="closeButton">&times;</span>
+                <h2>Neustadt-Glewe, Germany tickets</h2>
+              </div>
+              <div class="modal-body">
+                <h3 class="modal-date">15 May</h3>
+                <p class="modal-text">Together with PsyTrance festival Europe comes a new show from Infected Mushroom, showing their new album! A festival hosting 4 seperate stages, with big names appearing such as Astrix, Infected Mushroom and Neelix!</p>
+                <select class="modal-amount" name="ticketAmount">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+                <button class="ticket-button" type="button" name="button" onclick="ticketGekocht()">Buy!</button>
+              </div>
+            </div>
+          </section>
+
         </section>
         <section class="tourSection tour3">
-          <h1>Düren, Duitsland</h1>
+          <h1>Düren, Germany</h1>
           <h2>13 augustus</h2>
-          <button type="button" name="button" class="IMbutton">Buy ticket!</button>
+          <button type="button" name="button" class="modal-button IMbutton">Buy ticket!</button>
+
+          <section class="modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="closeButton">&times;</span>
+                <h2>Düren, Germany tickets</h2>
+              </div>
+              <div class="modal-body">
+                <h3 class="modal-date">15 May</h3>
+                <p class="modal-text">Together with PsyTrance festival Europe comes a new show from Infected Mushroom, showing their new album! A festival hosting 4 seperate stages, with big names appearing such as Astrix, Infected Mushroom and Neelix!</p>
+                <select class="modal-amount" name="ticketAmount">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+                <button class="ticket-button" type="button" name="button" onclick="ticketGekocht()">Buy!</button>
+              </div>
+            </div>
+          </section>
+
         </section>
       </article>
     </main>
     <footer class="footerMain">
       <p>  Gemaakt door Devin Stigter in opdracht van Hogeschool Leiden </p>
     </footer>
+    <script src="js/main.js"></script>
   </body>
 </html>
