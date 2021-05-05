@@ -1,0 +1,566 @@
+/*---------------Main thingies----------*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+.container {
+  min-height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+  height: 100%;
+  background: #011638;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #011638, #2E294E);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #011638, #2E294E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-attachment: fixed;
+}
+
+h2 {
+  color: white;
+  font-size: 200%;
+}
+
+p {
+  color: white;
+}
+
+/*Website startup Overlay*/
+.fadeInOverlay1 {
+  width: 100vw;
+  height: 50vh;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  animation-name: fadeInOverlay1;
+  animation-duration: 0.8s;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.fadeInOverlay2 {
+  width: 100vw;
+  height: 50vh;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  background-color: white;
+  animation-name: fadeInOverlay2;
+  animation-duration: 0.8s;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+/*------------Header stuff---------------*/
+.headerBlock {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background: url("../img/IMAlbumCover.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.IMTitleCard {
+  display: block;
+  position: absolute;
+  top: 20vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  object-fit: cover;
+}
+
+.overlay {
+  color: black;
+  width: 100%;
+  height: 70vh;
+  background-color: black;
+  opacity: 0.2;
+  animation-name: overlayBreathing;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+.IMbutton {
+  float: right;
+  background-color: #eeeeee;
+  color: #08193B;
+  font-weight: bold;
+  font-size: 120%;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+
+.IMbutton:hover{
+  background-color: #08193B;
+  color: #eeeeee;
+  border: 1px solid white;
+}
+
+/*----------------Main--------------------*/
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas:
+    'infoTitle infoTitle infoTitle infoTitle infoImage infoImage'
+    'infoText infoText infoText infoText infoImage infoImage'
+    'infoText infoText infoText infoText infoImage infoImage'
+    'infoText infoText infoText infoText infoImage infoImage';
+  grid-column-gap: 5vw;
+  grid-row-gap: 5vw;
+}
+
+.Home_InfoTitle {
+  text-align: center;
+  grid-area: infoTitle;
+  margin-top: 1rem;
+}
+
+.Home_InfoText {
+  text-align: center;
+  grid-area: infoText;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  margin-top: -20px;
+}
+
+.Home_Image {
+  grid-area: infoImage;
+  border-left: 1px solid black;
+}
+
+.IMDuoPicture{
+  width: 35vw;
+}
+
+/*------------Shopping-grid--------------*/
+.shopGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+    'shopItem1 shopItem2 shopItem3'
+    'shopItem1 shopItem2 shopItem3'
+    'shopItem1 shopItem2 shopItem3'
+    'shopItem4 shopItem5 shopItem6'
+    'shopItem4 shopItem5 shopItem6'
+    'shopItem4 shopItem5 shopItem6';
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.shopGrid > div {
+  text-align: center;
+  padding: 10px;
+}
+
+.shopItemFigure{
+  transition: 0.2s;
+}
+
+.shopItemFigure:hover{
+  transform: scale(1.1);
+}
+
+.shopItemFigure > img {
+    height: 200px;
+    width: auto;
+    padding: 20px;
+    border-radius: 40px;
+}
+
+.shopItem{
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+
+.shopItem1 {
+  grid-area: shopItem1;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.shopItem2 {
+  grid-area: shopItem2;
+}
+
+.shopItem3 {
+  grid-area: shopItem3;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.shopItem4 {
+  grid-area: shopItem4;
+}
+
+.shopItem5 {
+  grid-area: shopItem5;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.shopItem6 {
+  grid-area: shopItem6;
+}
+
+@media only screen and (max-width: 1000px) {
+  .shopItemFigure > img {
+      height: auto;
+      width: 30vw;
+  }
+
+  .shopGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-areas:
+      'shopItem1 shopItem2'
+      'shopItem1 shopItem2'
+      'shopItem1 shopItem2'
+      'shopItem3 shopItem4'
+      'shopItem3 shopItem4'
+      'shopItem3 shopItem4'
+      'shopItem5 shopItem6'
+      'shopItem5 shopItem6'
+      'shopItem5 shopItem6';
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .shopItem3{
+    border-left: 0;
+    border-bottom: 0;
+  }
+
+  .shopItem4 {
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+  }
+
+  .shopItem5{
+    border-left: 0;
+  }
+}
+
+
+/*------------Contact Grid--------------*/
+.contact-form__form {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "naam invulvak ."
+    "email invulvak ."
+    "vraagType invulvak knop";
+  padding: 1rem;
+  gap: 3vw 3vw;
+}
+
+.contact-form__section__name{
+  grid-area: naam;
+}
+
+.contact-form__section__email{
+  grid-area: email;
+}
+
+.contact-form__section__questionType{
+  grid-area: vraagType;
+}
+
+.contact-form__section__textarea{
+  grid-area: invulvak;
+  margin: 1rem;
+}
+
+.contact-form__section__textarea > textarea{
+  width: 30vw;
+  height: 100%;
+}
+
+.contact-form__section__button{
+  grid-area: knop;
+}
+
+.contact-form__form > section > label{
+  color: white;
+  font-size: 150%;
+}
+
+.contact-form__form > section > input{
+  width: 20vw;
+  height: 1.5rem;
+}
+
+.contact-form__form > section > select{
+  width: 10vw;
+  font-size: 120%;
+}
+
+@media only screen and (max-width: 1000px){
+  .contact-form__form {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "naam invulvak "
+      "email invulvak "
+      "vraagType invulvak"
+      ". knop";
+    gap: 2vw 2vw;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .contact-form__form > section > label{
+    font-size: 100%;
+  }
+
+  .contact-form__form > section > input{
+    width: 30vw;
+    height: 1rem;
+  }
+
+  .contact-form__form > section > select{
+    width: 15vw;
+    font-size: 80%;
+  }
+}
+/*-------------About Grid---------------*/
+.grid-container__about {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 3vw 3vw;
+  grid-template-areas:
+    "artiest1 aboutFoto1 artiest2"
+    "aboutFoto2 discography aboutFoto3";
+  padding-top: 1rem;
+}
+
+.artiest1 { grid-area: artiest1; }
+
+.aboutFoto1 { grid-area: aboutFoto1; }
+
+.artiest2 { grid-area: artiest2; }
+
+.discography { grid-area: discography; }
+
+.aboutFoto2 { grid-area: aboutFoto2; }
+
+.aboutFoto3 { grid-area: aboutFoto3; }
+
+.aboutFoto__img{
+  height: auto;
+  width: 30vw;
+  object-fit: cover;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+
+.grid-container__about > section > h2{
+  margin-bottom: 1rem;
+}
+
+.aboutTekst{
+  padding-left: 1rem;
+  font-size: 110%;
+}
+
+.discography > ul{
+  display: block;
+  padding-left: 2rem;
+  color: white;
+  font-family: monospace;
+}
+
+@media only screen and (max-width: 1000px){
+  .grid-container__about {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3vw 3vw;
+    grid-template-areas:
+      "artiest1 aboutFoto1"
+      "aboutFoto2 artiest2"
+      "discography aboutFoto3";
+    padding-top: 1rem;
+  }
+
+  .aboutSectionFoto{
+    text-align: center;
+  }
+
+  .aboutFoto__img{
+    width: 40vw;
+  }
+
+
+}
+
+@media only screen and (max-width: 600px){
+  .grid-container__about {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 3vw 3vw;
+    grid-template-areas:
+      "artiest1 aboutFoto1"
+      "aboutFoto2 artiest2"
+      "discography aboutFoto3";
+    padding-top: 1rem;
+  }
+}
+
+/*-------------Tour Grid-----------------*/
+.tourGrid{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 3vw 3vw;
+  grid-template-areas:
+    "tour1"
+    "tour2"
+    "tour3";
+}
+
+.tour1{
+  grid-area: tour1;
+}
+
+.tour2{
+  grid-area: tour2;
+}
+
+.tour3{
+  grid-area: tour3;
+}
+
+.tourSection{
+  padding: 2rem;
+  margin: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 5px #000000;
+}
+
+/*------------Navigation bar-------------*/
+.navBarOptions {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2E294E;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  box-shadow: 5px 0 10px 0;
+}
+
+.navbarLogo {
+  height: 40px;
+  width: 40px;
+  float: left;
+  position: absolute;
+  padding-left: 15px;
+  transform: translateY(-45px);
+}
+
+.navBarOptions > li {
+  float: right;
+}
+
+.navBarOptions > li > a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 24px;
+  text-decoration: none;
+  font-size: 130%;
+}
+
+.navBarOptions > li > a:hover {
+  background-color: #111;
+  border-radius: 5px;
+}
+
+
+/*----------------Footer-------------*/
+.footerMain {
+  width: 100%;
+  height: 60px;
+  background-color: #2E294E;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: 0px -2px 20px 8px #000000;
+}
+
+.footerMain > p{
+  font-size: 80%;
+  padding-right: 1rem;
+}
+
+/*-------------Utility CLasses--------*/
+.a-justifyContent{
+  display: flex;
+  justify-content: center;
+}
+
+/*---------------Scrollbar------------*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/*-------------Animations-------------*/
+@keyframes overlayBreathing {
+  0%  {opacity: 0.65;}
+  50% {opacity: 0.2;}
+  100% {opacity: 0.65;}
+}
+
+@keyframes fadeInOverlay1 {
+  0% {height: 50vh; opacity: 1;}
+  100% {height: 0vh; opacity: 0.3;}
+}
+
+@keyframes fadeInOverlay2 {
+  0% {height: 50vh; opacity: 1;}
+  100% {height: 0vh; opacity: 0.3;}
+}

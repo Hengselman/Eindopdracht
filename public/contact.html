@@ -1,0 +1,64 @@
+<!--Auteur: Devin Stigter -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="js/main.js"></script>
+    <title>The (un)official website of Infected Mushroom!</title>
+  </head>
+  <body>
+    <div class="fadeInOverlay1"></div>
+    <div class="fadeInOverlay2"></div>
+    <div class="headerBlock">
+      <div class="overlay"></div>
+      <figure>
+        <img class="IMTitleCard" src="img/IMTitle.png" alt="Infected Mushroom">
+      </figure>
+    </div>
+    <header>
+      <nav>
+        <ul class="navBarOptions">
+          <li><a class="activePage" href="/contact.html">Contact</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/shop.html">Shop</a></li>
+          <li><a href="/tours.html">Tours</a></li>
+          <li><a href="/index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article class="contact-form__container">
+        <form class="contact-form__form" action="index.html" method="post">
+          <section class="contact-form__section__name">
+            <label id="naamLabel" for="name">Naam: </label>
+            <input id="name" type="text" name="name">
+          </section>
+          <section class="contact-form__section__email">
+            <label class="contact-form__email" id="emailLabel" for="emailInput">E-mail: </label>
+            <input class="contact-form__email" id="emailInput" type="email" name="email">
+          </section>
+          <section class="contact-form__section__questionType">
+            <label class="questionType" for="dropdown">Wat voor soort vraag wil je stellen: </label>
+            <select id="dropdown" name="questionType">
+              <option value="opmerking">Opmerking </option>
+              <option value="vraag">Vraag </option>
+              <option value="liefdesbrief">Liefdesbrief </option>
+            </select>
+          </section>
+          <section class="contact-form__section__textarea">
+            <textarea id="opmerking" name="opmerking" rows="8" cols="80"></textarea>
+          </section>
+          <section class="contact-form__section__button">
+            <button class="IMbutton" type="button" name="button">Verstuur</button>
+          </section>
+        </form>
+      </article>
+    </main>
+    <footer class="footerMain">
+      <p>  Gemaakt door Devin Stigter in opdracht van Hogeschool Leiden </p>
+    </footer>
+  </body>
+</html>

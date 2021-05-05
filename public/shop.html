@@ -1,0 +1,76 @@
+<!--Auteur: Devin Stigter -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="js/main.js"></script>
+    <title>The (un)official website of Infected Mushroom!</title>
+  </head>
+  <body>
+    <div class="fadeInOverlay1"></div>
+    <div class="fadeInOverlay2"></div>
+    <div class="headerBlock">
+      <div class="overlay"></div>
+      <figure>
+        <img class="IMTitleCard" src="img/IMTitle.png" alt="Infected Mushroom">
+      </figure>
+    </div>
+    <header>
+      <nav>
+        <ul class="navBarOptions">
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a class="activePage" href=".">Shop</a></li>
+          <li><a href="/tours.html">Tours</a></li>
+          <li><a href="/index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="shopGrid">
+
+        <article data-name="Converting Vegetarians II - LP" onclick="koopProduct(this.getAttribute('data-name'))" class="shopItem1 shopItem">
+          <h3 class="shopItemTitle"> Converting Vegetarians II - LP </h3>
+          <figure class="shopItemFigure"><img src="/img/Merch_ConvertingVegetarians2Vinyl.jpg" alt="LP Cover of Converting Vegetarians II."></figure>
+          <p class="shopItemDescription"> A vinyl record of the album 'Converting Vegetarians II'<p>
+        </article>
+
+        <article data-name="Army Of Mushrooms - LP" onclick="koopProduct(this.getAttribute('data-name'))" class="shopItem2 shopItem">
+          <h3 class="shopItemTitle"> Army Of Mushrooms - LP </h3>
+          <figure class="shopItemFigure"><img src="/img/Merch_ArmyOfMushroomsVinyl.jpg" alt="LP Cover of Army Of Mushrooms."></figure>
+          <p class="shopItemDescription"> A vinyl record of the album 'Army Of Mushrooms'<p>
+        </article>
+
+        <article data-name="Infected Mushroom T-Shirt - Black" onclick="koopProduct(this.getAttribute('data-name'))" class="shopItem3 shopItem">
+          <h3 class="shopItemTitle"> Infected Mushroom T-Shirt - Black </h3>
+          <figure class="shopItemFigure"><img src="/img/Merch_BlackTshirt.png" alt="Infected Mushroom T-Shirt"></figure>
+          <p class="shopItemDescription"><strong>Limited edition!</strong> - Black Infected Mushroom T-Shirt<p>
+        </article>
+
+        <article data-name="Return To The Sauce - LP" onclick="koopProduct(this.getAttribute('data-name'))" class="shopItem4 shopItem">
+          <h3 class="shopItemTitle"> Return To The Sauce - LP </h3>
+          <figure class="shopItemFigure"><img src="/img/Merch_ReturnToTheSauce.jpg" alt="Picture of vinyl record of Infected Mushroom."></figure>
+          <p class="shopItemDescription"> A vinyl record of the album 'Return to the Sauce'.<p>
+        </article>
+
+        <article data-name="Legend of the Black Shawarma - LP" onclick="koopProduct(this.getAttribute('data-name'))" class="shopItem5 shopItem">
+          <h3 class="shopItemTitle"> Legend of the Black Shawarma - LP </h3>
+          <figure class="shopItemFigure"><img src="/img/Merch_LegendoftheBlackShawarma.jpg" alt="Picture of vinyl record of Infected Mushroom."></figure>
+          <p class="shopItemDescription"> A vinyl record of the album 'Return to the Sauce'.<p>
+        </article>
+
+        <article data-name="Infected Mushroom T-Shirt - White" onclick="koopProduct(this.getAttribute('data-name'))" class="shopItem6 shopItem">
+          <h3 class="shopItemTitle"> Infected Mushroom T-Shirt - White </h3>
+          <figure class="shopItemFigure"><img src="img/Merch_WhiteTshirt.png" alt="Infected Mushroom T-Shirt."></figure>
+          <p class="shopItemDescription"><strong>Limited edition!</strong> - White Infected Mushroom T-Shirt<p>
+        </article>
+      </section>
+    </main>
+    <footer class="footerMain">
+      <p>  Gemaakt door Devin Stigter in opdracht van Hogeschool Leiden </p>
+    </footer>
+  </body>
+</html>
