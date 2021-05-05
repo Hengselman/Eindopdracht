@@ -2,6 +2,10 @@ function koopProduct(productName) {
   alert("Je hebt het product (" + productName + ") in je winkelmandje gedaan.");
 }
 
+function ticketGekocht() {
+  alert("Tickets succesvol gekocht!");
+}
+
 var modal = document.getElementsByClassName('modal');
 var modalButton = document.getElementsByClassName("modal-button");
 var closeButton = document.getElementsByClassName("closeButton");

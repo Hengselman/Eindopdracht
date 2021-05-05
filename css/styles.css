@@ -513,9 +513,72 @@ p {
 }
 
 .modal-body {
-  padding: 2px 16px;
+  padding: 1rem 1rem 2rem 1rem;
   border-radius: 20px;
 }
+
+.modal-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr;
+  gap: 0 2rem;
+  grid-template-areas:
+    "modal-date modal-date modal-date modal-date"
+    "modal-text modal-text . ."
+    "modal-text modal-text modal-amount ticket-button";
+}
+
+@media only screen and (max-width: 600px){
+  .modal-body {
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+    gap: 0.5rem 0.5rem;
+    grid-template-areas:
+      "modal-date modal-date modal-date modal-date"
+      "modal-text modal-text modal-text modal-text"
+      "modal-amount modal-amount ticket-button ticket-button";
+  }
+}
+
+.modal-date {
+  grid-area: modal-date;
+  text-align: center;
+  font-size: 150%;
+}
+
+.modal-text {
+  grid-area: modal-text;
+  color: black;
+}
+
+.modal-amount {
+  grid-area: modal-amount;
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.ticket-button {
+  grid-area: ticket-button;
+  float: right;
+  background-color: #eeeeee;
+  color: #08193B;
+  font-weight: bold;
+  font-size: 120%;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+
+.ticket-button:hover{
+  background-color: #08193B;
+  color: #eeeeee;
+  border: 1px solid white;
+}
+
 /*------------Navigation bar-------------*/
 .navBarOptions {
   list-style-type: none;
